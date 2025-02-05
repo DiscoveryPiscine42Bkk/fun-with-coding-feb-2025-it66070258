@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        body {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 100px;
+            margin: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="balloon" onclick="put()" onmouseout="out()">
+
+    </div>
+
+    <script>
+        let width = 200;
+        let height = 200;
+        let br = 100;
+        let color = ["red", "green", "blue"];
+        let count = 0;
+
+        let b = document.getElementById("balloon");
+
+        function put() {
+            width += 10;
+            height += 10;
+            br += 5;
+            if (count == 2) {
+                count = 0;
+                b.style.backgroundColor = color[count];
+            } else {
+                count += 1;
+                b.style.backgroundColor = color[count];
+            }
+
+            if (width > 420 && height > 420) {
+                width = 200;
+                height = 200;
+                br = 100;
+                b.style.width = `${width}px`;
+                b.style.height = `${height}px`;
+                b.style.borderRadius = `${br}px`;
+            } else {
+                b.style.width = `${width}px`;
+                b.style.height = `${height}px`;
+                b.style.borderRadius = `${br}px`;
+            }
+        }
+
+        function out() {
+            width -= 5;
+            height -= 5;
+            br -= 2.5;
+            if (count == 0) {
+                count = 2;
+                b.style.backgroundColor = color[count];
+            } else {
+                count -= 1;
+                b.style.backgroundColor = color[count];
+            }
+
+            if (width < 200 && height < 200) {
+                width = 200;
+                height = 200;
+                br = 100;
+                b.style.width = `${width}px`;
+                b.style.height = `${height}px`;
+                b.style.borderRadius = `${br}px`;
+            } else {
+                b.style.width = `${width}px`;
+                b.style.height = `${height}px`;
+                b.style.borderRadius = `${br}px`;
+            }
+        }
+    </script>
+</body>
+
+</html>
