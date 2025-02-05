@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+    <button type="button" onclick="random()">Click me!</button>
+    <script>
+        let css = ["#3E3B32",
+            "#6C7059",
+            "#FF2301",
+            "#F54021",
+            "#1D1E33",
+            "#35682D",
+            "#8673A1",
+            "#A5A5A5",
+            "#686C5E",
+            "#587246"
+        ]
+        function random() {
+            document.body.style.backgroundColor = css[Math.floor(Math.random() * 10)];
+        }
+    </script>
+</body>
+</html>
