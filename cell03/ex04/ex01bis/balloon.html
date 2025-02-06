@@ -24,68 +24,56 @@
 </head>
 
 <body>
-    <div id="balloon" onclick="put()" onmouseout="out()">
-    </div>
+    <div id="balloon"></div>
+
     <script>
-        let width = 200;
-        let height = 200;
-        let br = 100;
-        let color = ["red", "green", "blue"];
-        let count = 0;
+        $(document).ready(function () {
+            let width = 200;
+            let height = 200;
+            let br = 100;
+            let color = ["red", "green", "blue"];
+            let count = 0;
 
-        let b = document.getElementById("balloon");
+            $("#balloon").on("click", function () {
+                width += 10;
+                height += 10;
+                br += 5;
+                count = (count + 1) % color.length;
+                
+                if (width > 420 && height > 420) {
+                    width = 200;
+                    height = 200;
+                    br = 100;
+                }
+                
+                $(this).css({
+                    "width": width + "px",
+                    "height": height + "px",
+                    "border-radius": br + "px",
+                    "background-color": color[count]
+                });
+            });
 
-        function put() {
-            width += 10;
-            height += 10;
-            br += 5;
-            if (count == 2) {
-                count = 0;
-                b.style.backgroundColor = color[count];
-            } else {
-                count += 1;
-                b.style.backgroundColor = color[count];
-            }
-
-            if (width > 420 && height > 420) {
-                width = 200;
-                height = 200;
-                br = 100;
-                b.style.width = `${width}px`;
-                b.style.height = `${height}px`;
-                b.style.borderRadius = `${br}px`;
-            } else {
-                b.style.width = `${width}px`;
-                b.style.height = `${height}px`;
-                b.style.borderRadius = `${br}px`;
-            }
-        }
-
-        function out() {
-            width -= 5;
-            height -= 5;
-            br -= 2.5;
-            if (count == 0) {
-                count = 2;
-                b.style.backgroundColor = color[count];
-            } else {
-                count -= 1;
-                b.style.backgroundColor = color[count];
-            }
-
-            if (width < 200 && height < 200) {
-                width = 200;
-                height = 200;
-                br = 100;
-                b.style.width = `${width}px`;
-                b.style.height = `${height}px`;
-                b.style.borderRadius = `${br}px`;
-            } else {
-                b.style.width = `${width}px`;
-                b.style.height = `${height}px`;
-                b.style.borderRadius = `${br}px`;
-            }
-        }
+            $("#balloon").on("mouseout", function () {
+                width -= 5;
+                height -= 5;
+                br -= 2.5;
+                count = (count - 1 + color.length) % color.length;
+                
+                if (width < 200 && height < 200) {
+                    width = 200;
+                    height = 200;
+                    br = 100;
+                }
+                
+                $(this).css({
+                    "width": width + "px",
+                    "height": height + "px",
+                    "border-radius": br + "px",
+                    "background-color": color[count]
+                });
+            });
+        });
     </script>
 </body>
 
