@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgb(21, 32, 43);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.select_proflie img {
+    width: 450px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.select_proflie img:hover {
+    width: 550px;
+    height: 650px;
+}
+
+.select_proflie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.h_select {
+    text-align: center;
+    color: aliceblue;
+    font-size: 60px;
+}
+
+.select_proflie h2 {
+    text-align: center;
+}
+
+.select_proflie a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.line {
+    background-color: aliceblue;
+    width: 1000px;
+    height: 5px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer h1 {
+    color: aliceblue;
+    text-align: right;
+    margin-right: 20px;
+}

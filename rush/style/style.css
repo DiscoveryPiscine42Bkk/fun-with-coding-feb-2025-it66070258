@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgb(21, 32, 43);
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.footer {
+    text-align: right;
+    margin-right: 20px;
+    color: aliceblue;
+}
+
+.tab_bar {
+    background-color: rgb(56, 68, 77);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab_left {
+    display: flex;
+    gap: 5px;
+}
+
+.tab_right {
+    display: flex;
+    gap: 5px;
+}
+
+.tab_nav {
+    display: flex;
+    background-color: rgb(4, 170, 109);
+    border: none;
+    width: 180px;
+    height: 56px;
+    color: aliceblue;
+    font-size: 20px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab_nav:hover {
+    background-color: rgba(4, 170, 109, 0.178);
+}
+
+#About_Me {
+    margin-top: 80px;
+}
+
+.Proflie_Img img {
+    margin-top: 86px;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.Education {
+    text-align: left;
+    color: gainsboro;
+}
+
+.Education img {
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+}
+
+.Proflie_Img {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.About_Me {
+    margin-top: 40px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    padding: 20px;
+    width: 800px;
+    height: 200px;
+}
+
+.About_Me h1 {
+    font-size: 40px;
+}
+
+.About_Me p {
+    font-size: 20px;
+}
+
+.main_skill img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+.main_skill {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photoshop_div,
+.coding_div {
+    width: 800px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.main_skill h1 {
+    font-size: 40px;
+}
+
+.main_skill p {
+    font-size: 30px;
+}
+
+.h_skill {
+    margin-left: 350px;
+    font-size: 80px;
+    color: aliceblue;
+    height: 50px;
+}
+
+.sub_skill img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-color: aliceblue;
+}
+
+.sub_skill {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.line {
+    background-color: aliceblue;
+    width: 1000px;
+    height: 5px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 40px;
+    color: aliceblue;
+    height: 50px;
+}
+
+.Education h3 {
+    text-align: center;
+}
+
+header {
+    padding: 0%;
+    margin: 0%;
+    top: 0%;
+    position: fixed;
+    width: 100%;
+}
+
+.Proflie {
+    background-color: aliceblue;
+    width: 450px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.Proflie h1 {
+    font-size: 40px;
+}
+
+.Proflie h2 {
+    font-size: 35px;
+    color: rgb(80, 80, 80);
+}
+
+.About {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.accomplishment img {
+    width: 400px;
+    height: 300px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.accomplishment {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 25%);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certificate img {
+    width: 450px;
+    height: 350px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.certificate {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 25%);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link_contact {
+    width: 400px;
+    margin-left: 380px;
+}
+
+.link_contact a {
+    font-size: 30px;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 20px;
+}
+
+.link_contact li {
+    list-style: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .certificate {
+        grid-template-columns: repeat(2, 50%);
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .certificate img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .accomplishment {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .accomplishment img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .line {
+        width: 500px;
+    }
+
+    .h_skill {
+        margin-left: 30px;
+        font-size: 70px;
+    }
+
+    .Proflie_Img img {
+        margin-top: 186px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .tab_nav {
+        width: 130px;
+        height: 56px;
+        font-size: 15px;
+    }
+
+    .Proflie_Img {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        width: 100%;
+        text-align: center;
+    }
+
+    .sub_skill img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .link_contact {
+        margin-left: 80px;
+    }
+}
